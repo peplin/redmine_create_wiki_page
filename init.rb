@@ -1,6 +1,4 @@
-require 'redmine'
-
-Redmine::Plugin.register :create_wiki_page do
+Redmine::Plugin.register :redmine_create_wiki_page do
   name 'Create Wiki Page plugin'
   author 'Christopher Peplin'
   description 'This plugin adds a shortcut to create a new wiki page on each existing page'
