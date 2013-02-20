@@ -1,7 +1,7 @@
 $(document).ready(function($) {
     if($(".wiki-page").length > 0) {
         var newLink = $("<a href=\"#\">New</a>");
-        $("#content .contextual").prepend(newLink);
+        $($("#content .contextual")[0]).prepend(newLink);
         $(newLink).click(function() {
             var parent = $(this).parent();
             var form = $("<form></form>");
