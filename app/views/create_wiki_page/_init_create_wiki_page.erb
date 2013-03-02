@@ -1,1 +1,28 @@
-<%= javascript_include_tag('create_wiki_page', :plugin => 'redmine_create_wiki_page') %>
+<%- if @page && User.current.allowed_to?({:controller => 'wiki', :action => 'edit'}, @project) %>
+<script type="text/javascript">
+    $(document).ready(function($) {
+    if($(".wiki-page").length > 0) {
+        var newLink = $("<a href=\"#\" class=\"icon icon-add\"><%= l :title %></a>");
+        $($("#content .contextual")[0]).prepend(newLink);
+        $(newLink).click(function() {
+            var parent = $(this).parent();
+            var form = $("<form></form>");
+            form.append("<label><%= l :input_label %> </label><input type=\"text\">");
+            $(form).submit(function(e) {
+                e.preventDefault();
+                var name = $($(form).children()[1]).val();
+                var wikiPath = "<%= url_for(:controller => 'wiki', :action => 'show', :project_id => @project) %>";
+                var parentName = "<%= @page.title %>"
+                var newPathname = "/" + name + "?parent=" + parentName;
+                window.location.assign(wikiPath + newPathname);
+                return false;
+            });
+
+            $(this).replaceWith(form);
+            form.children("input").focus();
+            return false;
+        });
+    }
+});
+</script>
+<%- end %>
