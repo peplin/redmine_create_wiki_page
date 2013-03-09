@@ -17,7 +17,11 @@ Issues: https://github.com/peplin/redmine-new-wiki/issues
    Enter. The wiki page you are currently on will be used as the parent for the
    new page.
 
-## Author and License
+## Contributors
 
-This plugin was authored by Chris peplin, and is published under the BSD
-license.
+* Christopher Peplin
+* Daigo UCHIYAMA
+
+## License
+
+This plugin is published under the BSD license.
