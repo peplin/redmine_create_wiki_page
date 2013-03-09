@@ -11,7 +11,7 @@
             $(form).submit(function(e) {
                 e.preventDefault();
                 var name = $($(form).children()[1]).val();
-                var wikiPath = "<%= url_for(:controller => 'wiki', :action => 'show', :project_id => @project) %>";
+                var wikiPath = "<%= url_for(:controller => 'wiki', :action => 'show', :project_id => @project, :id => nil) %>";
                 var parentName = "<%= @page.title %>"
                 var newPathname = "/" + name + "?parent=" + parentName;
                 window.location.assign(wikiPath + newPathname);
