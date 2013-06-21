@@ -1,4 +1,4 @@
-<%- if @page && User.current.allowed_to?({:controller => 'wiki', :action => 'edit'}, @project) %>
+<%- if @page && @page.kind_of?(WikiPage) && User.current.allowed_to?({:controller => 'wiki', :action => 'edit'}, @project) %>
 <script type="text/javascript">
     $(document).ready(function($) {
     if($(".wiki-page").length > 0) {
