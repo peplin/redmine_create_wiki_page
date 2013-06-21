@@ -21,6 +21,7 @@ Issues: https://github.com/peplin/redmine-new-wiki/issues
 
 * Christopher Peplin
 * Daigo UCHIYAMA
+* Jean-Luc Geering
 
 ## License
 
