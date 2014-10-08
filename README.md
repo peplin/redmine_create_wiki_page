@@ -4,9 +4,9 @@ Redmine plugin: Create new wiki page
 This Redmine plugin (tested with Redmine 2.2.3) adds a "New" link to every wiki
 page, making it simpler to create new wiki pages.
 
-Project page: https://github.com/peplin/redmine-new-wiki
+Project page: https://github.com/peplin/redmine_create_wiki_page
 
-Issues: https://github.com/peplin/redmine-new-wiki/issues
+Issues: https://github.com/peplin/redmine_create_wiki_page/issues
 
 ## Installation
 
